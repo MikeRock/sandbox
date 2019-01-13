@@ -1,0 +1,14 @@
+{
+  "mappings": {
+    "doc": {
+      "properties": {
+        "join_field": {
+          "type": "join",
+          "relations": {
+            "franchise": "film"
+          }
+        }
+      }
+    }
+  }
+}

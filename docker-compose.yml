@@ -1,0 +1,44 @@
+version: '3.7'
+services:
+  testing:
+    container_name: app_test
+    environment:
+      - NODE_ENV
+    env_file:
+      - .env
+    deploy:
+      restart_policy:
+        condition: always
+        delay: 5s
+      mode: global
+      resources:
+        limits:
+          cpus: '0.50'
+          memory: 500M
+        reservations:
+          cpus: '0.25'
+          memory: 200M
+    build:
+      context: .
+      dockerfile: Dockerfile
+      labels:
+        - 'com.sii.environment=test'
+        - 'com.sii.version=1.0'
+      args:
+        NODE_VERSION: 'latest'
+        NODE_ENV: 'test'
+        APP_NAME: 'node'
+        APP_VERSION: 'latest'
+    volumes:
+      - dummy:/node_modules:rw
+    ports:
+      - '3000:3000'
+    expose:
+      - '3000'
+    networks:
+      - overlay
+networks:
+  overlay:
+volumes:
+  dummy:
+    name: dummy

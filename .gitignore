@@ -1,0 +1,15 @@
+node_modules
+coverage
+public
+dist
+builds
+caches
+*.log
+dest
+monitor
+logs
+.vscode
+.env*
+caches
+coverage
+!.env.example

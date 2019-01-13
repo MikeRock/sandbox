@@ -1,0 +1,26 @@
+// @import 'themes';
+@import 'colors';
+@import 'mixins';
+@import '../test.local';
+//@import '../global';
+
+.local2 {
+  background-color: gray;
+}
+
+
+.test {
+  @include themify() {
+    background-color: theme('color', $current-theme);
+  }
+
+  composes: global(global);
+  // @extend %local4;
+}
+
+
+
+// ! If @extending global class HAVE to wrap local class in :local() even if it is implicitidly cast as local
+// ! If @extending local class wrapper class has to be local
+// ! Use global classesas silent % classes which output wont be included if not used. Minus is they are included as additional rules in every place they are extended
+// ! Extend comes first then other rules

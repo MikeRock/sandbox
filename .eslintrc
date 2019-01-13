@@ -1,0 +1,25 @@
+{
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true
+    }
+  },
+  "env": {
+    "browser": true
+  },
+  "plugins": ["compat", "react", "promise", "security"],
+  "extends": [
+    "plugin:promise/recommended",
+    "plugin:security/recommended",
+    "standard"
+  ],
+  "rules": {
+    "indent": 1,
+    "compat/compat": 1,
+    "promise/param-names": 1,
+    "space-before-function-paren": 0,
+    "no-unused-expressions": 1
+  }
+}

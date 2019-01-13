@@ -1,0 +1,17 @@
+%local4 {
+  color: dodgerblue;
+}
+
+:global {
+  .global {
+    background-color: red;
+  }
+
+  .g-not {
+    background-color: red;
+  }
+
+  .global2 {
+    background-color: pink;
+  }
+}

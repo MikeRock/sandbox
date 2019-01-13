@@ -1,0 +1,9 @@
+node_modules
+public
+dist
+build
+caches
+*.log
+.vscode
+.env*
+!.env.sample

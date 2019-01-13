@@ -1,0 +1,15 @@
+$local_var: orange;
+
+.local3 {
+  background-color: green;
+}
+
+%local4 {
+  background-color: blue;
+}
+
+:global {
+  .global {
+    background-color: pink;
+  }
+}

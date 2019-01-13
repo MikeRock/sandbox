@@ -1,0 +1,19 @@
+@import "scss/index";
+
+.test2 {
+  color: blue;
+  font-style: italic;
+}
+
+.test {
+  background-color: $primary_color;
+  // composes: global from 'test.global.scss';
+  margin: dimension();
+  transition: all 250ms ease-in-cubic;
+}
+
+
+li:at-least(5) {
+  background-color: theme('primary');
+  background-image: url(/test.jpg);
+}

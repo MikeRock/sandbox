@@ -1,0 +1,14 @@
+:global {
+
+  .global {
+    background-color: red;
+  }
+
+  .global3 {
+    background-color: red;
+  }
+}
+
+.global2 {
+  background-color: violet;
+}
